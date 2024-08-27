@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './card.component.css'
 })
 export class CardComponent {
-  teste = 'xablau'
+  @Input({
+    required: true
+  }) planName: string = ''
+  @Input() planDescription: string = ''
+  @Input() planPrice: string = ''
+  @Input() planTips: Array<string> = [
+    '20 team members',
+    'Plan team meetings',
+    'File sharing'
+  ]
 }

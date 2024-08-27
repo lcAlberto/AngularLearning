@@ -1,9 +1,16 @@
 <main class="main">
   <div class="content">
     <h1> Eu sou o APP component</h1>
-    <app-navbar/>
-    <app-card></app-card>
-    <!-- <app-card-roxo></app-card-roxo> -->
-    </div>
+  </div>
+  <app-card
+    planName="Ultimate"
+    planDescription="esse e o plano foda por demais tchê"
+    planPrice="99"
+  />
+  <app-card
+    planName="Pobre Premium"
+    planDescription="esse e o plano pra você que é um quebrado"
+    planPrice="1,50"
+  />
 </main>
 <router-outlet />

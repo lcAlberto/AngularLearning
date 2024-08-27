@@ -2,15 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { CardsModule } from './cards/cards.module';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavbarComponent
+    AppComponent,  
   ],
   imports: [
     BrowserModule,
@@ -18,7 +17,8 @@ import { CardsModule } from './cards/cards.module';
     CardsModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
