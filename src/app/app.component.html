@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="left-container">
+    <div class="top-div">
+      <app-filter (onFilter)="onFilter($event)"/>
+    </div>
+    <div class="main-left-div">
+      <app-users-list
+        [usersList]="filteredList"
+        (setSelectedUser)="setSelectedUser($event)"
+        />
+    </div>
+  </div>
+  <div class="right-div">
+    <app-user-details [user]="selectedUser"/>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="filter">
+  <div class="example-form">
+    <!-- name-input -->
+    <div class="form__name-input">
+      <mat-form-field class="example-full-width">
+        <mat-label>Nome</mat-label>
+        <input
+          [(ngModel)]="filters.name"
+          matInput
+          name="name"
+          placeholder="Ex. Jacinto"
+          value="JAcinto"
+        />
+      </mat-form-field>
+    </div>
+    <!-- date-input -->
+    <div class="form__date-input">
+      <mat-form-field>
+        <mat-label>Data de cadastro</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input
+            [(ngModel)]="filters.startDate"
+            matStartDate
+            name="Start date"
+            placeholder="Start date"
+          />
+          <input
+            [(ngModel)]="filters.endDate"
+            matEndDate
+            name="End date"
+            placeholder="End date"
+          />
+        </mat-date-range-input>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!-- date-input -->
+    <div class="form__select-input">
+      <mat-form-field>
+        <mat-label>Status</mat-label>
+        <mat-select [(ngModel)]="filters.status">
+          @for (status of statusList; track status) {
+          <mat-option [value]="status.value">{{ status.label }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <!-- date-input -->
+    <div class="form__button">
+      <div class="example-button-container">
+        <button
+          mat-fab
+          extended
+          (click)="sendFilter()"
+        >
+          <mat-icon>favorite</mat-icon>
+          Basic
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

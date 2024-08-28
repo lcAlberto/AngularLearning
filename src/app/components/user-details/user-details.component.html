@@ -1,0 +1,47 @@
+<mat-list role="list">
+  <mat-list-item role="listitem">
+    <h1>Dados do usuário</h1>
+  </mat-list-item>
+
+  <mat-list-item role="listitem">
+    <label>Nome:</label>
+    <span>{{user.active | status}} | {{user.name}} | {{user.age}} anos</span>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  
+  <mat-list-item role="listitem">
+    <label>email:</label>
+    <span>{{user.email}}</span>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  
+  <mat-list-item role="listitem">
+    <label>Telefone:</label>
+    <span>{{user.phone | phone}}</span>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+
+  <mat-list-item role="listitem">
+    <label>Cidade/Estado :</label>
+    <span>{{user?.address?.city}}/{{user?.address?.state}}</span>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+
+  <mat-list-item role="listitem">
+    <label>Ocupação:</label>
+    <span>{{user.function}}</span>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  
+  <mat-list-item role="listitem">
+    <label>Endereço:</label>
+    <span>{{user.address | address}}</span>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+
+  <mat-list-item role="listitem">
+    <label>Cadastrado em:</label>
+    <span>{{user.created_at | date:'dd/MM/yyyy HH:mm'}}</span>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>

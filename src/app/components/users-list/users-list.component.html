@@ -1,0 +1,30 @@
+<div class="users-list">
+  <table mat-table [dataSource]="usersList" class="mat-elevation-z8">
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Nome</th>
+      <td mat-cell *matCellDef="let user" (click)="selectedUser(user)">
+        {{ user.name }}
+      </td>
+    </ng-container>
+
+    <!-- Cadastro Column -->
+    <ng-container matColumnDef="created_at">
+      <th mat-header-cell *matHeaderCellDef>Cadastro</th>
+      <td mat-cell *matCellDef="let user" (click)="selectedUser(user)">
+        {{user.created_at | date:'dd/MM/yyyy HH:mm'}}
+      </td>
+    </ng-container>
+
+    <!-- Ativo Column -->
+    <ng-container matColumnDef="active">
+      <th mat-header-cell *matHeaderCellDef>Status</th>
+      <td mat-cell *matCellDef="let user" (click)="selectedUser(user)">
+        {{user.active | status}}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

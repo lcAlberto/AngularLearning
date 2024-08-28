@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(43, 52, 65);
+}
+
+.left-container {
+    width: 70%;
+    max-height: 100vh;
+    flex-direction: column;
+    // background-color: aqua;
+}
+
+.top-div {
+    flex-grow: 1;
+    // height: 20%;
+    // background-color: cadetblue;
+}
+
+.main-left-div {
+    // height: 80%;
+    // background-color: chocolate;
+}
+
+.right-div {
+    width: 30%;
+    max-height: 100vh;
+}
