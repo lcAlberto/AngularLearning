@@ -1,5 +1,10 @@
 # ProjetoCurso
 
+# Projeto de estudo sobre o Angular
+
+Utilizando [Angular CLI](https://github.com/angular/angular-cli) e Angular Material
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.1.
 
 ## Development server
